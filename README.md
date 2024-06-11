@@ -2,7 +2,7 @@
 
 - web.config，修改重写规则，
 ```
-<add key="Com.Xuqingkai.RequestForward" value="^/PEISAPI/API/(.+)" />
+<add key="Com.Xuqingkai.RequestForward" value="^/API/(.+)" />
 ```
 
 - RequestForward.ashx，自行根据需要修改转发报文
@@ -28,3 +28,5 @@ public void ProcessRequest(System.Web.HttpContext context)
     context.Response.End();
 }
 ```
+- 如上配置，请求地址为：  http://127.0.0.1/API/system/isConnect
+- 实际请求地址为：http://192.168.1.100/PEISAPI/API/system/isConnect
